@@ -18,6 +18,9 @@ public class CarController {
 
     private final CarService carService;
 
+    /**
+     *контроллер для добавления авто
+     */
     @PostMapping
     public ResponseEntity<Car> addCar(@RequestBody Car car) {
         Car newCar = carService.saveCar(car);
@@ -25,7 +28,7 @@ public class CarController {
     }
 
     /**
-    *контроллер для добавления авто
+    *контроллер для просмотра авто
      */
     @GetMapping
     public ResponseEntity<List<Car>> getAllCars() {
