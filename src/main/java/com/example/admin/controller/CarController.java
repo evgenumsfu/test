@@ -24,6 +24,9 @@ public class CarController {
         return ResponseEntity.ok(newCar);
     }
 
+    /**
+    *контроллер для добавления авто
+     */
     @GetMapping
     public ResponseEntity<List<Car>> getAllCars() {
         List<Car> cars = carService.getAllCars();
