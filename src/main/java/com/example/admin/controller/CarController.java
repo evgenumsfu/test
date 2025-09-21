@@ -18,12 +18,18 @@ public class CarController {
 
     private final CarService carService;
 
+    /**
+     *контроллер для добавления авто
+     */
     @PostMapping
     public ResponseEntity<Car> addCar(@RequestBody Car car) {
         Car newCar = carService.saveCar(car);
         return ResponseEntity.ok(newCar);
     }
 
+    /**
+    *контроллер для просмотра авто
+     */
     @GetMapping
     public ResponseEntity<List<Car>> getAllCars() {
         List<Car> cars = carService.getAllCars();
